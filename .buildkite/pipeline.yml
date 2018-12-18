@@ -1,5 +1,10 @@
 steps:
-  - label: "Test"
+  - label: "Test docker (vendored)"
     plugins:
       - "./.buildkite/plugins/docker":
           image: "hello-world"
+
+  - label: "Test clowns (submodule)"
+    plugins:
+      - "./.buildkite/plugins/detect-clowns": ~
+

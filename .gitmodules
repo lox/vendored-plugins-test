@@ -1,0 +1,3 @@
+[submodule ".buildkite/plugins/detect-clowns"]
+	path = .buildkite/plugins/detect-clowns
+	url = https://github.com/buildkite-plugins/detect-clowns-buildkite-plugin.git
