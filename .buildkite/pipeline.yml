@@ -1,0 +1,5 @@
+steps:
+  - label: "Test"
+    plugins:
+      - "./.buildkite/plugins/docker":
+          image: "hello-world"
