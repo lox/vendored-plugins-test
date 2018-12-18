@@ -12,7 +12,8 @@ template: |
   steps:
     - command: test.sh
       plugins:
-  -     docker-compose#$PREVIOUS_TAG:
-  +     docker-compose#TODO:
-          run: app
+  -     docker#$PREVIOUS_TAG:
+  +     docker#TODO:
+          image: someimage
+          workdir: /app
   ```
