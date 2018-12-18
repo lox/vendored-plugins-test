@@ -259,7 +259,11 @@ elif [[ ${#command[@]} -gt 0 ]] ; then
   done
 fi
 
-echo "--- :docker: Running ${display_command[*]} in ${BUILDKITE_PLUGIN_DOCKER_IMAGE}"
+if [[ ${#display_command[@]} -gt 0 ]] ; then
+  echo "--- :docker: Running ${display_command[*]} in ${BUILDKITE_PLUGIN_DOCKER_IMAGE}"
+else
+  echo "--- :docker: Running default command in ${BUILDKITE_PLUGIN_DOCKER_IMAGE}"
+fi
 
 if [[ "${debug_mode:-off}" =~ (on) ]] ; then
   echo "$ docker run ${args[*]}" >&2
